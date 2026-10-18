@@ -60,27 +60,23 @@
 ## 三、项目结构
 
 ```text
+human-gender-recognition/
 ├── gender_classifier.py           # 主方案：人脸检测、特征提取、SVM 训练与预测
 ├── realtime_gender_detection.py   # 实时 / 单图 / 批量三种推理模式
 ├── collect_gender_data.py         # 用摄像头采集自己的训练数据
 ├── build_dataset_from_utkface.py  # 从 UTKFace 构建 data/{train,val,test}
 ├── CNN_gender.py                  # 可选：TensorFlow 迁移学习方案
-├── requirements.txt               # 主流程与可选依赖
-├── .gitignore                     # 排除虚拟环境、数据集和生成物
 ├── package_clean.py               # 白名单打包脚本（排除隐私数据与生成物）
 ├── gender_classifier_model.pkl    # 已训练好的 SVM 流水线
 ├── model_info.pkl                 # 模型元信息（类别、特征维度、准确率等）
-├── data/
-│   ├── train/{male,female}/       # 训练集：每类 800 张
-│   ├── val/{male,female}/         # 验证集：每类 200 张（仅 CNN 方案使用）
-│   ├── test/{male,female}/        # 测试集：每类 200 张
-│   └── dataset_manifest.csv       # 每张图的年龄、种族、来源文件名
-├── _dataset_raw/
-│   ├── utk_faces_images.zip       # UTKFace 原始图片（约 127 MB）
-│   └── utk_dataset_metadata.csv   # UTKFace 标注（age / gender / race）
-├── results/                       # 训练曲线、样本图、混淆矩阵
-└── README.md
+├── requirements.txt               # 主流程与可选依赖
+├── LICENSE                        # Apache License 2.0
+├── NOTICE                         # 数据集与模型授权说明
+├── README.md                      # 项目说明
+└── .gitignore                     # 排除虚拟环境、数据集和生成物
 ```
+
+运行时生成、不纳入仓库的目录：`data/`、`_dataset_raw/`、`results/`、`dist/`、`.venv/`。
 
 ---
 
