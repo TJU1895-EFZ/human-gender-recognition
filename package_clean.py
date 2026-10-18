@@ -23,14 +23,17 @@ for _stream in (sys.stdout, sys.stderr):
 
 ROOT = Path(__file__).resolve().parent
 DIST_DIR = ROOT / 'dist'
+VERSION = '1.0.0'
 
 # 白名单：只打包这些文件
 BASE_FILES = [
     'README.md',
+    'CHANGELOG.md',
     'LICENSE',
     'NOTICE',
     'requirements.txt',
     '.gitignore',
+    '.gitattributes',
     'gender_classifier.py',
     'realtime_gender_detection.py',
     'collect_gender_data.py',
@@ -71,10 +74,11 @@ def main():
         return 1
 
     DIST_DIR.mkdir(exist_ok=True)
-    zip_path = DIST_DIR / 'lesson04_clean.zip'
+    zip_path = DIST_DIR / f'human-gender-recognition-v{VERSION}.zip'
 
     manifest = [
         '项目：基于机器视觉的人体性别识别',
+        '版本：v' + VERSION,
         '打包时间：' + datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
         '',
         '文件清单（SHA-256  字节数  路径）：',

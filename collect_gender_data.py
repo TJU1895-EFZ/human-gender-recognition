@@ -12,6 +12,10 @@
       python collect_gender_data.py --every 0.3          # 每 0.3 秒拍一张
       python collect_gender_data.py --no-require-face    # 不管有没有人脸都拍
 按键： m=录男性  f=录女性  s=停止/暂停  q=退出
+
+隐私提示：
+    采集前请确保已获得被拍摄者同意。人脸属于敏感生物识别信息，
+    采集到的 data/ 目录已被 .gitignore 排除，请勿上传或用于未经授权的用途。
 """
 
 import os

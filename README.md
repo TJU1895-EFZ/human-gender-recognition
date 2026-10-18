@@ -2,6 +2,8 @@
 
 用传统机器视觉（OpenCV + scikit-learn）从图片或摄像头画面中判断人脸性别（男 / 女），并给出置信度与各类概率。主方案不需要 TensorFlow/PyTorch，在普通 CPU 上即可完成训练与实时推理。
 
+**当前版本：v1.0.0** ｜ [变更日志](CHANGELOG.md) ｜ [Releases](https://github.com/TJU1895-EFZ/human-gender-recognition/releases)
+
 ---
 
 ## 一、项目解决什么问题
@@ -180,6 +182,8 @@ python collect_gender_data.py
 
 > 注意：SVM 主方案训练时只读取 `data/train` 和 `data/test`；`data/val` 仅供 `CNN_gender.py` 使用。
 
+> 隐私提示：采集前请确保已获得被拍摄者同意。人脸属于敏感生物识别信息，采集到的 `data/` 已被 `.gitignore` 排除，请勿上传或用于未经授权的用途。
+
 ### 5.2 训练模型
 
 ```bash
@@ -264,7 +268,7 @@ python CNN_gender.py
 python package_clean.py
 ```
 
-压缩包输出到 `dist/`，并附带 `MANIFEST.txt`（每个文件的大小与 SHA-256）。脚本采用白名单机制，只会打包源码、依赖清单、许可证、模型和文档；`.venv/`、`data/`、`_dataset_raw/`、`results/`、`__pycache__/` 等不会进入压缩包。
+压缩包输出到 `dist/human-gender-recognition-v1.0.0.zip`，并附带 `MANIFEST.txt`（版本号、每个文件的大小与 SHA-256）。脚本采用白名单机制，只会打包源码、依赖清单、许可证、模型和文档；`.venv/`、`data/`、`_dataset_raw/`、`results/`、`__pycache__/` 等不会进入压缩包。
 
 ---
 
