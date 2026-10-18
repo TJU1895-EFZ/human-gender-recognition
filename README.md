@@ -60,7 +60,6 @@
 ## 三、项目结构
 
 ```text
-第四节课/
 ├── gender_classifier.py           # 主方案：人脸检测、特征提取、SVM 训练与预测
 ├── realtime_gender_detection.py   # 实时 / 单图 / 批量三种推理模式
 ├── collect_gender_data.py         # 用摄像头采集自己的训练数据
