@@ -1,0 +1,37 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# 虚拟环境（含本机用户名与绝对路径，不要提交）
+.venv/
+venv/
+
+# 数据集：人脸属于敏感生物识别信息，且体积较大，仅通过下载/构建脚本获取
+data/
+_dataset_raw/
+
+# 脚本生成的结果图（可随时重新生成）
+results/
+*.docx
+*.pdf
+
+# 打包输出
+dist/
+
+# 摄像头截图
+gender_shot_*.jpg
+
+# 临时文件
+*.tmp
+*.bak
+*~
+~$*
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/

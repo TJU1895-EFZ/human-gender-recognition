@@ -1,0 +1,14 @@
+# 主流程依赖（在 Python 3.12.10 下验证）
+opencv-python==4.11.0.86
+numpy==2.5.4
+scikit-learn==1.9.1
+joblib==1.6.0
+matplotlib==3.11.2
+pillow==12.3.0
+
+# 数据集构建
+pandas==3.0.6           # build_dataset_from_utkface.py 使用
+
+# 其它可选依赖，按需取消注释：
+# pywin32               # 仅 Windows：中文窗口标题
+# tensorflow            # 运行 CNN_gender.py 时

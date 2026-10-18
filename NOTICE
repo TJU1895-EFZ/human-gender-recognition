@@ -1,0 +1,28 @@
+基于机器视觉的人体性别识别
+Human Gender Recognition Based on Machine Vision
+Copyright 2026 TJU1895-EFZ
+
+本项目的源代码采用 Apache License 2.0 授权，完整条款见 LICENSE 文件。
+
+模型授权说明
+------------
+gender_classifier_model.pkl 基于 UTKFace 数据集训练，仅供非商业研究与教学使用，
+不在 Apache License 2.0 授权范围内。
+
+UTKFace 数据集条款：available for non-commercial research purposes only.
+数据集主页：https://github.com/aicip/UTKFace
+本仓库不包含 UTKFace 的原始人脸图片；data/、_dataset_raw/、results/ 等
+含人脸的原始数据均未随仓库分发。图片版权归原始权利人所有。
+
+使用限制
+--------
+本项目及模型不得用于身份认定、监控，或对个人进行未经同意的推断。
+
+第三方组件
+----------
+本仓库不分发第三方组件的源代码，依赖通过 requirements.txt 安装，遵循各自许可证：
+- opencv-python: Apache License 2.0
+- numpy, scikit-learn, joblib, pandas: BSD
+- matplotlib: PSF-based license
+- Pillow: MIT-CMU
+- TensorFlow（可选）: Apache License 2.0
